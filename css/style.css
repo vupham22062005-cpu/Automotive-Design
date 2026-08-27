@@ -1,0 +1,641 @@
+/* =========================================
+   CÀI ĐẶT CHUNG
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #0b63ce;
+    --blue-dark: #084b9c;
+    --blue-light: #eaf3ff;
+    --white: #ffffff;
+    --background: #f5f8fc;
+    --text: #172033;
+    --text-light: #687386;
+    --border: #dce4ef;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* =========================================
+   TIỆN ÍCH
+========================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   TRANG ĐĂNG NHẬP / ĐĂNG KÝ
+========================================= */
+
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #eef6ff 100%
+        );
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+
+/* =========================================
+   LOGO / THƯƠNG HIỆU
+========================================= */
+
+.brand {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.brand-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--blue);
+
+    border-radius: 18px;
+
+    font-size: 34px;
+
+    box-shadow:
+        0 10px 25px rgba(11, 99, 206, 0.20);
+}
+
+.brand h1 {
+    color: var(--blue-dark);
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.brand p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+
+/* =========================================
+   KHUNG FORM
+========================================= */
+
+.auth-box {
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 15px 40px rgba(30, 70, 110, 0.10);
+}
+
+.auth-box h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.auth-description {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px rgba(11, 99, 206, 0.10);
+}
+
+
+/* =========================================
+   FORM OPTIONS
+========================================= */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 4px 0 22px;
+
+    font-size: 13px;
+}
+
+.remember {
+    color: var(--text-light);
+}
+
+.remember input {
+    margin-right: 5px;
+}
+
+.link-button {
+    border: none;
+    background: none;
+
+    color: var(--blue);
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.primary-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: var(--blue);
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.primary-button:hover {
+    background: var(--blue-dark);
+
+    transform: translateY(-1px);
+}
+
+.secondary-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid var(--blue);
+
+    border-radius: 9px;
+
+    background: white;
+    color: var(--blue);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background: var(--blue-light);
+}
+
+.back-button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    border: none;
+    background: transparent;
+
+    color: var(--blue);
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 22px 0;
+
+    color: #9aa5b5;
+
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--border);
+}
+
+
+/* =========================================
+   TRANG CHỦ
+========================================= */
+
+.home-page {
+    min-height: 100vh;
+    background: var(--background);
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    height: 70px;
+
+    padding: 0 5%;
+
+    background: white;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+
+    color: var(--blue-dark);
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+.logout-button {
+    padding: 9px 16px;
+
+    border: 1px solid var(--blue);
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: var(--blue);
+
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: var(--blue-light);
+}
+
+
+/* =========================================
+   NỘI DUNG TRANG CHỦ
+========================================= */
+
+.home-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    padding: 70px 0 55px;
+}
+
+.hero.small-hero {
+    padding-bottom: 35px;
+}
+
+.hero-label,
+.section-label {
+    color: var(--blue);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    margin-top: 12px;
+
+    font-size: 44px;
+
+    line-height: 1.15;
+
+    color: var(--text);
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin-top: 18px;
+
+    color: var(--text-light);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.vehicle-section,
+.sub-menu-section {
+    padding-bottom: 70px;
+}
+
+.section-title {
+    margin-bottom: 22px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+
+    margin-top: 7px;
+}
+
+
+/* =========================================
+   CARD XE
+========================================= */
+
+.vehicle-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.vehicle-card {
+    position: relative;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 12px 30px rgba(11, 99, 206, 0.12);
+}
+
+.vehicle-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--blue-light);
+
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+.vehicle-content h3 {
+    font-size: 17px;
+
+    margin-bottom: 7px;
+}
+
+.vehicle-content p {
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.card-arrow {
+    position: absolute;
+
+    right: 20px;
+    bottom: 18px;
+
+    color: var(--blue);
+
+    font-size: 20px;
+}
+
+.disabled-card {
+    cursor: default;
+    opacity: 0.55;
+}
+
+.disabled-card:hover {
+    transform: none;
+
+    border-color: var(--border);
+
+    box-shadow: none;
+}
+
+
+/* =========================================
+   10 MỤC NHỎ
+========================================= */
+
+.sub-menu-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.sub-menu-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    padding: 24px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.sub-menu-card:hover {
+    border-color: var(--blue);
+
+    background: var(--blue-light);
+
+    transform: translateY(-2px);
+}
+
+.sub-menu-card span {
+    color: var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.sub-menu-card h3 {
+    margin-top: 8px;
+
+    font-size: 17px;
+}
+
+.sub-menu-card p {
+    margin-top: 6px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .vehicle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar-user span {
+        display: none;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .auth-box {
+        padding: 25px 20px;
+    }
+
+    .sub-menu-grid {
+        grid-template-columns: 1fr;
+    }
+}

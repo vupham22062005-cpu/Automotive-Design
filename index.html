@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Design</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         TRANG ĐĂNG NHẬP
+    ========================== -->
+    <div id="loginPage" class="auth-page">
+
+        <div class="auth-container">
+
+            <div class="brand">
+                <div class="brand-icon">🚛</div>
+
+                <h1>Automotive Design</h1>
+
+                <p>
+                    Hệ thống hỗ trợ thiết kế ô tô chuyên dùng
+                </p>
+            </div>
+
+            <div class="auth-box">
+
+                <h2>Đăng nhập</h2>
+
+                <p class="auth-description">
+                    Đăng nhập để truy cập hệ thống
+                </p>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+                        <label for="loginUsername">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginUsername"
+                            placeholder="Nhập email của bạn"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="loginPassword">
+                            Mật khẩu
+                        </label>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Nhập mật khẩu"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-options">
+
+                        <label class="remember">
+                            <input type="checkbox">
+                            Ghi nhớ đăng nhập
+                        </label>
+
+                        <button
+                            type="button"
+                            class="link-button"
+                            onclick="showForgotPassword()"
+                        >
+                            Quên mật khẩu?
+                        </button>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Đăng nhập
+                    </button>
+
+                </form>
+
+                <div class="divider">
+                    <span>hoặc</span>
+                </div>
+
+                <button
+                    class="secondary-button"
+                    onclick="showRegister()"
+                >
+                    Tạo tài khoản mới
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         TRANG ĐĂNG KÝ
+    ========================== -->
+    <div id="registerPage" class="auth-page hidden">
+
+        <div class="auth-container">
+
+            <div class="brand">
+
+                <div class="brand-icon">🚛</div>
+
+                <h1>Automotive Design</h1>
+
+                <p>
+                    Tạo tài khoản sinh viên
+                </p>
+
+            </div>
+
+            <div class="auth-box">
+
+                <h2>Tạo tài khoản</h2>
+
+                <p class="auth-description">
+                    Đăng ký tài khoản để sử dụng hệ thống
+                </p>
+
+                <form id="registerForm">
+
+                    <div class="input-group">
+                        <label for="registerName">
+                            Họ và tên
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerName"
+                            placeholder="Nhập họ và tên"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="registerUsername">
+                            Tên đăng nhập
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerUsername"
+                            placeholder="Tạo tên đăng nhập"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="registerEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registerEmail"
+                            placeholder="example@email.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="registerPassword">
+                            Mật khẩu
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Tạo mật khẩu"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="registerConfirmPassword">
+                            Nhập lại mật khẩu
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registerConfirmPassword"
+                            placeholder="Nhập lại mật khẩu"
+                            required
+                        >
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Đăng ký
+                    </button>
+
+                </form>
+
+                <button
+                    class="back-button"
+                    onclick="showLogin()"
+                >
+                    ← Quay lại đăng nhập
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         QUÊN MẬT KHẨU
+    ========================== -->
+    <div id="forgotPage" class="auth-page hidden">
+
+        <div class="auth-container">
+
+            <div class="brand">
+
+                <div class="brand-icon">🔐</div>
+
+                <h1>Khôi phục tài khoản</h1>
+
+                <p>
+                    Đặt lại mật khẩu
+                </p>
+
+            </div>
+
+            <div class="auth-box">
+
+                <h2>Quên mật khẩu?</h2>
+
+                <p class="auth-description">
+                    Nhập thông tin tài khoản để đặt lại mật khẩu
+                </p>
+
+                <form id="forgotForm">
+
+                    <div class="input-group">
+
+                        <label for="forgotEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="forgotEmail"
+                            placeholder="Nhập email tài khoản"
+                            required
+                        >
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Đặt lại mật khẩu
+                    </button>
+
+                </form>
+
+                <button
+                    class="back-button"
+                    onclick="showLogin()"
+                >
+                    ← Quay lại đăng nhập
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         TRANG CHỦ
+    ========================== -->
+    <div id="homePage" class="home-page hidden">
+
+        <header class="navbar">
+
+            <div class="navbar-brand">
+                🚛 Automotive Design
+            </div>
+
+            <div class="navbar-user">
+
+                <span id="welcomeUser">
+                    Xin chào!
+                </span>
+
+                <button
+                    class="logout-button"
+                    onclick="logout()"
+                >
+                    Đăng xuất
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <main class="home-container">
+
+            <section class="hero">
+
+                <span class="hero-label">
+                    AUTOMOTIVE DESIGN SYSTEM
+                </span>
+
+                <h1>
+                    Hệ thống hỗ trợ thiết kế
+                    <br>
+                    ô tô chuyên dùng
+                </h1>
+
+                <p>
+                    Công cụ học tập, tính toán và tra cứu
+                    dành cho sinh viên ngành ô tô.
+                </p>
+
+            </section>
+
+
+            <!-- =====================
+                 DANH MỤC XE
+            ====================== -->
+
+            <section class="vehicle-section">
+
+                <div class="section-title">
+
+                    <div>
+                        <span class="section-label">
+                            DANH MỤC PHƯƠNG TIỆN
+                        </span>
+
+                        <h2>
+                            Xe chuyên dùng
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="vehicle-grid">
+
+                    <!-- XE CHỞ ÉP RÁC -->
+
+                    <div
+                        class="vehicle-card"
+                        onclick="openGarbageTruck()"
+                    >
+
+                        <div class="vehicle-icon">
+                            🚛
+                        </div>
+
+                        <div class="vehicle-content">
+
+                            <h3>
+                                Xe chở ép rác
+                            </h3>
+
+                            <p>
+                                Thiết kế, cấu tạo và tính toán
+                                xe chở ép rác.
+                            </p>
+
+                        </div>
+
+                        <div class="card-arrow">
+                            →
+                        </div>
+
+                    </div>
+
+
+                    <!-- CÁC LOẠI XE SAU NÀY -->
+
+                    <div class="vehicle-card disabled-card">
+                        <div class="vehicle-icon">🚚</div>
+
+                        <div class="vehicle-content">
+                            <h3>Xe chuyên dùng 02</h3>
+                            <p>Đang phát triển</p>
+                        </div>
+                    </div>
+
+
+                    <div class="vehicle-card disabled-card">
+                        <div class="vehicle-icon">🚒</div>
+
+                        <div class="vehicle-content">
+                            <h3>Xe chuyên dùng 03</h3>
+                            <p>Đang phát triển</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         TRANG XE CHỞ ÉP RÁC
+    ========================== -->
+
+    <div id="garbageTruckPage" class="home-page hidden">
+
+        <header class="navbar">
+
+            <div class="navbar-brand">
+                🚛 Automotive Design
+            </div>
+
+            <button
+                class="logout-button"
+                onclick="showHome()"
+            >
+                ← Trang chủ
+            </button>
+
+        </header>
+
+
+        <main class="home-container">
+
+            <section class="hero small-hero">
+
+                <span class="hero-label">
+                    XE CHUYÊN DÙNG
+                </span>
+
+                <h1>
+                    Xe chở ép rác
+                </h1>
+
+                <p>
+                    Khu vực nghiên cứu và thiết kế xe chở ép rác.
+                </p>
+
+            </section>
+
+
+            <section class="sub-menu-section">
+
+                <div class="section-title">
+
+                    <span class="section-label">
+                        NỘI DUNG
+                    </span>
+
+                    <h2>
+                        Các nội dung thiết kế
+                    </h2>
+
+                </div>
+
+
+                <div class="sub-menu-grid">
+
+                    <div class="sub-menu-card">
+                        <span>01</span>
+                        <h3>Nội dung 01</h3>
+                        <p>Chờ anh đặt tên</p>
+                    </div>
+
+                    <div class="sub-menu-card">
+                        <span>02</span>
+                        <h3>Nội dung 02</h3>
+                        <p>Chờ anh đặt tên</p>
+                    </div>
+
+                    <div class="sub-menu-card">
+                        <span>03</span>
+                        <h3>Nội dung 03</h3>
+                        <p>Chờ anh đặt tên</p>
+                    </div>
+
+                    <div class="sub-menu-card">
+                        <span>04</span>
+                        <h3>Nội dung 04</h3>
+                        <p>Chờ anh đặt tên</p>
+                    </div>
+
+                    <div class="sub-menu-card">
+                        <span>05</span>
+                        <h3>Nội dung 05</h3>
+                        <p>Chờ anh đặt tên</p>
+                    </div>
+
+                    <div class="sub-menu-card">
+                        <span>06</span>
+                        <h3>Nội dung 06</h3>
+                        <p>Chờ anh đặt tên</p>
+                    </div>
+
+                    <div class="sub-menu-card">
+                        <span>07</span>
+                        <h3>Nội dung 07</h3>
+                        <p>Chờ anh đặt tên</p>
+                    </div>
+
+                    <div class="sub-menu-card">
+                        <span>08</span>
+                        <h3>Nội dung 08</h3>
+                        <p>Chờ anh đặt tên</p>
+                    </div>
+
+                    <div class="sub-menu-card">
+                        <span>09</span>
+                        <h3>Nội dung 09</h3>
+                        <p>Chờ anh đặt tên</p>
+                    </div>
+
+                    <div class="sub-menu-card">
+                        <span>10</span>
+                        <h3>Nội dung 10</h3>
+                        <p>Chờ anh đặt tên</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabaseClient.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
